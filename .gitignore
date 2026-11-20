@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+.vercel/
+# 素材の元画像（ライセンス上、公開リポジトリに含めない）
+_raw/
