@@ -55,6 +55,31 @@ a{color:#121212}a:hover{color:#3D3D3D}
 
 html{scroll-behavior:smooth}
 img{max-width:none}
+/* ===== SP only ===== */
+@media (max-width: 760px){
+  .pl-header-inner{flex-wrap:nowrap !important;padding:14px 16px !important;gap:12px !important}
+  .pl-head-cta{padding:10px 16px !important;font-size:12px !important}
+  .pl-head-badge{display:none !important}
+  .pl-hero{padding:12px 12px 40px !important;gap:12px !important}
+  .pl-hero-card{min-height:0 !important;padding:28px 22px 30px !important;gap:26px !important;border-radius:26px !important}
+  .pl-hero-panel{min-height:600px !important;padding:22px !important;border-radius:26px !important;overflow:hidden}
+  .pl-hero-woman{height:94% !important;max-width:88% !important;right:-10% !important}
+  .pl-hero-powder{left:auto !important;right:-6% !important;top:14% !important;width:78% !important}
+  .pl-pouch-wrap{min-height:0 !important;padding-left:0 !important}
+  .pl-pouch{transform:rotate(-6deg) scale(.74) !important;transform-origin:left bottom;margin-bottom:6px !important}
+  .pl-hero-ing{width:140px !important;left:72px !important;bottom:-4px !important}
+  .pl-marquee{transform:none !important;margin:0 !important;padding:14px 0 !important}
+  .pl-track-text{font-size:24px !important;gap:28px !important}
+  .pl-flavor-card{min-height:0 !important;padding:24px !important;gap:16px !important}
+  .pl-flavor-ing{width:48% !important;right:-6% !important;top:-6% !important}
+  .pl-sticky{bottom:0 !important;padding:0 !important;transition:transform .35s ease, opacity .35s ease}
+  .pl-sticky.is-hidden{transform:translateY(110%);opacity:0;pointer-events:none}
+  .pl-sticky-inner{border-radius:20px 20px 0 0 !important;max-width:none !important;padding:12px 14px calc(12px + env(safe-area-inset-bottom)) 18px !important;box-shadow:0 -8px 30px rgba(18,18,18,0.25) !important}
+  .pl-sticky-price{flex-direction:column;align-items:flex-start !important;gap:2px !important;font-size:11px !important}
+  .pl-sticky-sub{display:none !important}
+  .pl-hero-price{font-size:34px !important}
+}
+
     </style>
   </head>
   <body>
@@ -64,7 +89,7 @@ img{max-width:none}
 
   <!-- Header -->
   <header>
-    <div style="max-width: 1320px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap">
+    <div class="pl-header-inner" style="max-width: 1320px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap">
       <a class="pl-logo" href="#top" aria-label="PULSE トップへ" style="text-decoration: none; color: #121212; display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="46" height="46" viewBox="0 0 48 48" style="flex-shrink: 0; transform: rotate(-8deg)"><circle cx="24" cy="24" r="22" fill="#CFF56A" stroke="#121212" stroke-width="2.5"/><path d="M7 26h8l3.5-8 6 17 4.5-12 2.5 5H41" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 15c1.5-5 6-7.5 10.5-7.5 0 4.5-2.5 9-7.5 10.5-1.3.4-2.6.3-3.7-.1.1-1 .4-2 .7-2.9z" fill="#121212"/></svg><span style="display: flex; flex-direction: column; gap: 3px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 30px; line-height: 0.85; letter-spacing: -0.05em">PULSE<span style="color: #9A9A92">.</span></span><span style="font-size: 8px; font-weight: 700; letter-spacing: 0.22em; line-height: 1">PLANT PROTEIN</span></span></a>
       <nav class="pl-hide-sp" aria-label="メイン" style="display: flex; gap: 6px; flex-wrap: wrap; font-size: 13px; font-weight: 500">
         <a class="pl-nav" href="#why" style="padding: 10px 16px; border-radius: 999px; text-decoration: none; color: #121212; background: #E6E6E0">特長</a>
@@ -72,15 +97,15 @@ img{max-width:none}
         <a class="pl-nav" href="#plan" style="padding: 10px 16px; border-radius: 999px; text-decoration: none; color: #121212; background: #E6E6E0">価格</a>
         <a class="pl-nav" href="#faq" style="padding: 10px 16px; border-radius: 999px; text-decoration: none; color: #121212; background: #E6E6E0">FAQ</a>
       </nav>
-      <a class="pl-btn" href="#plan" style="background: #121212; color: #F3F3EF; font-weight: 700; font-size: 13px; padding: 12px 22px; border-radius: 999px; text-decoration: none; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 8px">¥1,980で試す<span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #CFF56A; color: #121212">60%OFF</span></a>
+      <a class="pl-btn pl-head-cta" href="#plan" style="background: #121212; color: #F3F3EF; font-weight: 700; font-size: 13px; padding: 12px 22px; border-radius: 999px; text-decoration: none; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 8px">¥1,980で試す<span class="pl-head-badge" style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #CFF56A; color: #121212">60%OFF</span></a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="top" style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(16px, 4vw, 48px) clamp(48px, 6vw, 80px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(520px, 100%), 1fr)); gap: 16px">
-    <div style="position: relative; z-index: 2; background: #FFFFFF; border-radius: 32px; padding: clamp(32px, 4vw, 56px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px; min-height: 640px; box-sizing: border-box">
+  <section id="top" class="pl-hero" style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(16px, 4vw, 48px) clamp(48px, 6vw, 80px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(520px, 100%), 1fr)); gap: 16px">
+    <div class="pl-hero-card" style="position: relative; z-index: 2; background: #FFFFFF; border-radius: 32px; padding: clamp(32px, 4vw, 56px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px; min-height: 640px; box-sizing: border-box">
       <img class="pl-hide-sp" src="/images/leaves.webp" alt="" aria-hidden="true" style="position: absolute; right: -70px; bottom: -56px; width: 250px; transform: rotate(-18deg); filter: drop-shadow(0 16px 16px rgba(18,18,18,0.22)); pointer-events: none">
-      <img src="/images/leaf.webp" alt="" aria-hidden="true" style="position: absolute; right: 18%; top: -34px; width: 110px; transform: rotate(32deg); filter: drop-shadow(0 10px 12px rgba(18,18,18,0.2)); pointer-events: none">
+      <img class="pl-hide-sp" src="/images/leaf.webp" alt="" aria-hidden="true" style="position: absolute; right: 18%; top: -34px; width: 110px; transform: rotate(32deg); filter: drop-shadow(0 10px 12px rgba(18,18,18,0.2)); pointer-events: none">
       <div style="display: flex; gap: 8px; flex-wrap: wrap">
         <span style="font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 999px; background: #CFF56A">植物性プロテイン</span>
         <span style="font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 999px; border: 1px solid #121212">人工甘味料不使用</span>
@@ -89,16 +114,16 @@ img{max-width:none}
       <div style="display: flex; flex-direction: column; gap: 24px">
         <p style="margin: 0; font-size: clamp(18px, 1.6vw, 22px); font-weight: 700; line-height: 1.6">からだに、まっすぐ効く一杯を。<br><span style="font-weight: 400; color: #4A4A45; font-size: 15px">えんどう豆と玄米のたんぱく質を、おいしく、毎日。</span></p>
         <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
-          <p style="margin: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap"><span style="font-size: 13px; font-weight: 700">定期便の初回</span><s style="font-size: 15px; color: #6A6A64">通常 ¥4,980</s><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: -0.03em">¥1,980</span><span style="font-size: 12px; font-weight: 900; padding: 4px 10px; border-radius: 999px; background: #121212; color: #CFF56A">60%OFF</span></p>
+          <p style="margin: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap"><span style="font-size: 13px; font-weight: 700">定期便の初回</span><s style="font-size: 15px; color: #6A6A64">通常 ¥4,980</s><span class="pl-hero-price" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: -0.03em">¥1,980</span><span style="font-size: 12px; font-weight: 900; padding: 4px 10px; border-radius: 999px; background: #121212; color: #CFF56A">60%OFF</span></p>
           <a class="pl-btn pl-cta" href="#plan" style="background: #CFF56A; color: #121212; border: 2px solid #121212; box-shadow: 4px 4px 0 #121212; font-weight: 900; font-size: clamp(15px, 1.4vw, 18px); padding: 20px clamp(22px, 3vw, 36px); border-radius: 999px; text-decoration: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 12px; min-height: 44px; box-sizing: border-box">初回 ¥1,980 で試してみる<svg class="pl-arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h11M10 4.5L14.5 9 10 13.5"/></svg></a>
           <ul style="margin: 0; padding: 0; list-style: none; display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; font-weight: 700; color: #2E2E2A"><li style="display: inline-flex; align-items: center; gap: 5px"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>送料無料</li><li style="display: inline-flex; align-items: center; gap: 5px"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>いつでも解約OK</li><li style="display: inline-flex; align-items: center; gap: 5px"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>回数しばりなし</li></ul>
         </div>
       </div>
     </div>
-    <div style="position: relative; background: var(--f-color); color: var(--f-ink); border-radius: 32px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 640px; box-sizing: border-box; transition: background .4s ease, color .4s ease">
+    <div class="pl-hero-panel" style="position: relative; background: var(--f-color); color: var(--f-ink); border-radius: 32px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 640px; box-sizing: border-box; transition: background .4s ease, color .4s ease">
       <div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 14%; text-align: right; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(90px, 14vw, 220px); line-height: 0.8; letter-spacing: -0.06em; opacity: 0.14; white-space: nowrap; overflow: hidden; border-radius: 32px"><span data-f="name">MATCHA</span></div>
-      <img src="/images/powder3.webp" alt="" aria-hidden="true" style="position: absolute; left: 22%; top: 4%; width: 62%; opacity: 0.95; z-index: 0; transform: rotate(-12deg); pointer-events: none">
-      <img src="/images/hero-woman.webp" alt="シェイカーを手に笑顔の女性" style="position: absolute; right: 0; bottom: 0; height: 112%; width: auto; max-width: 74%; object-fit: contain; object-position: right bottom; z-index: 1; filter: drop-shadow(-18px 24px 30px rgba(18,18,18,0.18))">
+      <img class="pl-hero-powder" src="/images/powder3.webp" alt="" aria-hidden="true" style="position: absolute; left: 22%; top: 4%; width: 62%; opacity: 0.95; z-index: 0; transform: rotate(-12deg); pointer-events: none">
+      <img class="pl-hero-woman" src="/images/hero-woman.webp" alt="シェイカーを手に笑顔の女性" style="position: absolute; right: 0; bottom: 0; height: 112%; width: auto; max-width: 74%; object-fit: contain; object-position: right bottom; z-index: 1; filter: drop-shadow(-18px 24px 30px rgba(18,18,18,0.18))">
       <div style="position: relative; z-index: 3; display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
         <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em">FLAVOR — <span data-f="no">1</span>/03</span>
         <div role="group" aria-label="フレーバーを選ぶ" style="display: flex; gap: 6px; flex-wrap: wrap">
@@ -112,8 +137,8 @@ img{max-width:none}
         </div>
       </div>
       <!-- pouch + ingredient -->
-      <div style="position: relative; z-index: 2; flex: 1; display: flex; align-items: flex-end; padding-left: clamp(8px, 2vw, 24px); min-height: 330px">
-        <div style="position: relative; width: 200px; height: 272px; background: #F3F3EF; color: #121212; border: 2px solid #121212; border-radius: 18px 18px 30px 30px; box-shadow: 8px 8px 0 #121212; display: flex; flex-direction: column; overflow: hidden; box-sizing: border-box; transform: rotate(-6deg); margin-bottom: 40px">
+      <div class="pl-pouch-wrap" style="position: relative; z-index: 2; flex: 1; display: flex; align-items: flex-end; padding-left: clamp(8px, 2vw, 24px); min-height: 330px">
+        <div class="pl-pouch" style="position: relative; width: 200px; height: 272px; background: #F3F3EF; color: #121212; border: 2px solid #121212; border-radius: 18px 18px 30px 30px; box-shadow: 8px 8px 0 #121212; display: flex; flex-direction: column; overflow: hidden; box-sizing: border-box; transform: rotate(-6deg); margin-bottom: 40px">
           <div aria-hidden="true" style="position: absolute; top: 10px; left: 16px; right: 16px; border-top: 2px dashed rgba(18,18,18,0.3)"></div>
           <div style="padding: 24px 14px 10px; display: flex; justify-content: space-between; align-items: flex-start">
             <div style="display: flex; align-items: center; gap: 6px">
@@ -133,16 +158,16 @@ img{max-width:none}
             <span aria-hidden="true" style="width: 46px; height: 20px; background: repeating-linear-gradient(90deg, #121212 0 1.5px, transparent 1.5px 3px, #121212 3px 5px, transparent 5px 6.5px, #121212 6.5px 7.5px, transparent 7.5px 10px)"></span>
           </div>
         </div>
-        <img data-fimg src="/images/matcha.webp" alt="木のスプーンにのった抹茶パウダー" style="position: absolute; left: var(--f-imgLeft); bottom: -6px; width: var(--f-imgW); height: auto; filter: drop-shadow(0 18px 18px rgba(18,18,18,0.28))">
+        <img class="pl-hero-ing" data-fimg src="/images/matcha.webp" alt="木のスプーンにのった抹茶パウダー" style="position: absolute; left: var(--f-imgLeft); bottom: -6px; width: var(--f-imgW); height: auto; filter: drop-shadow(0 18px 18px rgba(18,18,18,0.28))">
       </div>
-      <p style="position: relative; z-index: 3; margin: 0; max-width: 52%; min-width: 240px; font-size: clamp(16px, 1.4vw, 19px); font-weight: 700; line-height: 1.7; white-space: pre-line"><span data-f="note">宇治抹茶のほろ苦さ。
+      <p class="pl-hide-sp" style="position: relative; z-index: 3; margin: 0; max-width: 52%; min-width: 240px; font-size: clamp(16px, 1.4vw, 19px); font-weight: 700; line-height: 1.7; white-space: pre-line"><span data-f="note">宇治抹茶のほろ苦さ。
 豆乳で割ると、抹茶ラテに。</span></p>
     </div>
   </section>
 
   <!-- Marquee -->
-  <div aria-hidden="true" style="background: #121212; color: #CFF56A; padding: 18px 0; overflow: hidden; transform: rotate(-1.2deg); margin: 0 -20px">
-    <div class="pl-track" style="display: flex; gap: 40px; width: max-content; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: -0.03em; white-space: nowrap">
+  <div class="pl-marquee" aria-hidden="true" style="background: #121212; color: #CFF56A; padding: 18px 0; overflow: hidden; transform: rotate(-1.2deg); margin: 0 -20px">
+    <div class="pl-track pl-track-text" style="display: flex; gap: 40px; width: max-content; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: -0.03em; white-space: nowrap">
       <span>PLANT BASED</span><span>＊</span><span>NO ARTIFICIAL SWEETENER</span><span>＊</span><span>DAIRY FREE</span><span>＊</span><span>MIX IN 10 SEC</span><span>＊</span>
       <span>PLANT BASED</span><span>＊</span><span>NO ARTIFICIAL SWEETENER</span><span>＊</span><span>DAIRY FREE</span><span>＊</span><span>MIX IN 10 SEC</span><span>＊</span>
     </div>
@@ -248,9 +273,9 @@ img{max-width:none}
     <h2 style="margin: 0 0 40px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(48px, 7vw, 104px); line-height: 0.9; letter-spacing: -0.05em">3 FLAVORS<span style="color: #9A9A92">.</span></h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
       
-        <article class="pl-tile" style="position: relative; overflow: hidden; background: #B5D38A; color: #121212; border-radius: 28px; padding: 32px; min-height: 420px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+        <article class="pl-tile pl-flavor-card" style="position: relative; overflow: hidden; background: #B5D38A; color: #121212; border-radius: 28px; padding: 32px; min-height: 420px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
           <img src="/images/bg-matcha.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; mix-blend-mode: multiply; pointer-events: none">
-          <img src="/images/matcha.webp" alt="" aria-hidden="true" style="position: absolute; right: -14%; top: -4%; width: 78%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
+          <img src="/images/matcha.webp" alt="" aria-hidden="true" class="pl-flavor-ing" style="position: absolute; right: -14%; top: -4%; width: 78%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
           <span style="position: relative; font-size: 12px; font-weight: 700; letter-spacing: 0.12em">01</span>
           <div style="position: relative">
             <p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">MATCHA</p>
@@ -260,9 +285,9 @@ img{max-width:none}
           </div>
         </article>
       
-        <article class="pl-tile" style="position: relative; overflow: hidden; background: #5C3F33; color: #F3F3EF; border-radius: 28px; padding: 32px; min-height: 420px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+        <article class="pl-tile pl-flavor-card" style="position: relative; overflow: hidden; background: #5C3F33; color: #F3F3EF; border-radius: 28px; padding: 32px; min-height: 420px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
           <img src="/images/bg-cacao.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; mix-blend-mode: multiply; pointer-events: none">
-          <img src="/images/cacao.webp" alt="" aria-hidden="true" style="position: absolute; right: -14%; top: -4%; width: 58%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
+          <img src="/images/cacao.webp" alt="" aria-hidden="true" class="pl-flavor-ing" style="position: absolute; right: -14%; top: -4%; width: 58%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
           <span style="position: relative; font-size: 12px; font-weight: 700; letter-spacing: 0.12em">02</span>
           <div style="position: relative">
             <p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">CACAO</p>
@@ -272,9 +297,9 @@ img{max-width:none}
           </div>
         </article>
       
-        <article class="pl-tile" style="position: relative; overflow: hidden; background: #D9A877; color: #121212; border-radius: 28px; padding: 32px; min-height: 420px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+        <article class="pl-tile pl-flavor-card" style="position: relative; overflow: hidden; background: #D9A877; color: #121212; border-radius: 28px; padding: 32px; min-height: 420px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
           <img src="/images/bg-hojicha.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; mix-blend-mode: multiply; pointer-events: none">
-          <img src="/images/hojicha.webp" alt="" aria-hidden="true" style="position: absolute; right: -14%; top: -4%; width: 70%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
+          <img src="/images/hojicha.webp" alt="" aria-hidden="true" class="pl-flavor-ing" style="position: absolute; right: -14%; top: -4%; width: 70%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
           <span style="position: relative; font-size: 12px; font-weight: 700; letter-spacing: 0.12em">03</span>
           <div style="position: relative">
             <p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">HOJICHA</p>
@@ -460,9 +485,9 @@ img{max-width:none}
   </section>
 
   <!-- Sticky CTA -->
-  <div style="position: sticky; bottom: 16px; z-index: 20; padding: 0 clamp(12px, 3vw, 32px); margin-top: 24px; pointer-events: none">
-    <div style="pointer-events: auto; max-width: 760px; margin: 0 auto; background: #121212; color: #F3F3EF; border-radius: 999px; padding: 10px 10px 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 14px; box-shadow: 0 16px 40px rgba(18,18,18,0.3)">
-      <p style="margin: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-size: 13px; font-weight: 700"><span style="color: #CFF56A">定期便の初回</span><s style="color: #9A9A92">¥4,980</s><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; line-height: 1; letter-spacing: -0.03em">¥1,980</span><span style="font-size: 12px; color: #C8C8C0">送料無料・いつでも解約OK</span></p>
+  <div class="pl-sticky" style="position: sticky; bottom: 16px; z-index: 20; padding: 0 clamp(12px, 3vw, 32px); margin-top: 24px; pointer-events: none">
+    <div class="pl-sticky-inner" style="pointer-events: auto; max-width: 760px; margin: 0 auto; background: #121212; color: #F3F3EF; border-radius: 999px; padding: 10px 10px 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 14px; box-shadow: 0 16px 40px rgba(18,18,18,0.3)">
+      <p class="pl-sticky-price" style="margin: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-size: 13px; font-weight: 700"><span style="color: #CFF56A">定期便の初回</span><s style="color: #9A9A92">¥4,980</s><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; line-height: 1; letter-spacing: -0.03em">¥1,980</span><span class="pl-sticky-sub" style="font-size: 12px; color: #C8C8C0">送料無料・いつでも解約OK</span></p>
       <a class="pl-btn" href="#plan" style="background: #CFF56A; color: #121212; font-weight: 900; padding: 14px 24px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box; white-space: nowrap">今すぐ試す<svg class="pl-arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h11M10 4.5L14.5 9 10 13.5"/></svg></a>
     </div>
   </div>
@@ -480,6 +505,11 @@ img{max-width:none}
 </div>
 
     <script define:vars={{ F: [{"no": 1, "name": "MATCHA", "jp": "抹茶", "color": "#B5D38A", "ink": "#121212", "img": "/images/matcha.webp", "alt": "木のスプーンにのった抹茶パウダー", "imgW": "300px", "imgLeft": "120px", "note": "宇治抹茶のほろ苦さ。\n豆乳で割ると、抹茶ラテに。"}, {"no": 2, "name": "CACAO", "jp": "カカオ", "color": "#5C3F33", "ink": "#F3F3EF", "img": "/images/cacao.webp", "alt": "カカオ豆", "imgW": "200px", "imgLeft": "150px", "note": "カカオ豆の香ばしさ。\n甘さひかえめの、大人のココア。"}, {"no": 3, "name": "HOJICHA", "jp": "ほうじ茶", "color": "#D9A877", "ink": "#121212", "img": "/images/hojicha.webp", "alt": "木皿にのったほうじ茶の茶葉", "imgW": "250px", "imgLeft": "130px", "note": "焙じた茶葉の香り。\n夜のリラックスタイムにも。"}], P: {"sub": {"planName": "定期便（30杯分 / 月）", "price": "¥1,980", "priceNote": "税込・初回（2回目以降 ¥3,980）", "ctaLabel": "定期便を ¥1,980 ではじめる", "ctaNote": "回数しばりなし。マイページからいつでも解約・スキップOK", "perks": ["2回目以降も 20%OFF", "フレーバーは毎回変更OK", "送料無料・いつでも解約OK"]}, "once": {"planName": "単品（30杯分）", "price": "¥4,980", "priceNote": "税込", "ctaLabel": "単品で購入する", "ctaNote": "まずは1袋から。気に入ったら定期便への切り替えもかんたん", "perks": ["まずは1袋だけ試したい方に", "送料 ¥660"]}} }}>
+      const sticky = document.querySelector('.pl-sticky');
+      const hero = document.getElementById('top');
+      if (sticky && hero && 'IntersectionObserver' in window) {
+        new IntersectionObserver(([e]) => sticky.classList.toggle('is-hidden', e.isIntersecting), { threshold: 0.15 }).observe(hero);
+      }
       const root = document.querySelector('[data-root]');
       const chips = [...document.querySelectorAll('[aria-label="フレーバーを選ぶ"] button')];
       function setFlavor(i) {
