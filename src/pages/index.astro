@@ -56,6 +56,47 @@ a{color:#121212}a:hover{color:#3D3D3D}
 html{scroll-behavior:smooth}
 img{max-width:none}
 .pl-sp-only{display:none}
+/* ===== Tablet (761px - 1100px) ===== */
+@media (min-width: 761px) and (max-width: 1100px){
+  .pl-hero .pl-hide-sp{display:none !important}
+  .pl-sp-only{display:flex !important}
+  .pl-hero{padding:0 0 40px !important;gap:0 !important;display:flex !important;flex-direction:column}
+  .pl-hero-panel{order:-1;border-radius:0 0 40px 40px !important;min-height:clamp(740px, 92vw, 860px) !important;padding:28px 32px 32px !important;justify-content:flex-start !important;gap:20px !important;overflow:hidden}
+  .pl-sp-only > p:nth-of-type(2){font-size:clamp(88px, 12vw, 124px) !important}
+  .pl-flavor-pick{flex-direction:row !important;align-items:center !important;gap:12px !important;flex-wrap:wrap}
+  .pl-flavor-pick button[aria-pressed="true"]{background:#121212 !important;color:#CFF56A !important;border-color:#121212 !important}
+  .pl-flavor-pick button[aria-pressed="false"]{background:rgba(255,255,255,0.8) !important;color:#121212 !important;border-color:rgba(18,18,18,0.25) !important}
+  .pl-hero-woman{height:76% !important;max-width:58% !important;right:3% !important}
+  .pl-hero-powder{top:auto !important;bottom:26% !important;right:-4% !important;width:54% !important;opacity:.5 !important}
+  .pl-pouch-wrap{position:absolute !important;left:32px;bottom:32px;flex:none !important;min-height:0 !important}
+  .pl-hero-ing{width:170px !important;left:120px !important}
+  .pl-hero-card{margin:20px 24px 0 !important;min-height:0 !important;padding:32px 36px !important;gap:24px !important;box-shadow:none !important}
+  .pl-hero-card > div:not(.pl-hide-sp){flex-direction:row !important;justify-content:space-between;align-items:center;gap:32px !important}
+  .pl-hero-card > div:not(.pl-hide-sp) > p{max-width:44%}
+  .pl-flavor-card p:last-child{font-size:13px !important}
+  .pl-grid3{grid-template-columns:repeat(3, minmax(0, 1fr)) !important;gap:12px !important}
+  .pl-why-card{min-height:0 !important;padding:20px 18px 22px !important;gap:12px !important;border-radius:22px !important}
+  .pl-why-label{display:none !important}
+  .pl-why-img{width:84px !important;right:8px !important;top:12px !important;bottom:auto !important;transform:rotate(-6deg) !important}
+  .pl-why-text{max-width:100% !important}
+  .pl-why-text h3{font-size:19px !important}
+  .pl-why-card > div[style*="#ECECE6"]{max-width:100% !important;margin-top:36px}
+  .pl-why-card > div[style*="#ECECE6"] p{font-size:13px !important}
+  .pl-scene-photo{height:160px !important}
+  .pl-grid3 article h3{font-size:17px !important}
+  .pl-flavor-card{min-height:260px !important;padding:20px !important;border-radius:22px !important}
+  .pl-flavor-name{font-size:clamp(30px, 4.2vw, 42px) !important}
+  .pl-flavor-ing{width:62% !important;right:-10% !important}
+  .pl-grid3 > li{padding:18px !important;gap:14px !important;border-radius:22px !important}
+  .pl-step-media{height:180px !important}
+  .pl-step-circle{width:140px !important;height:140px !important}
+  .pl-step-img{max-height:170px !important}
+  .pl-step-num{font-size:56px !important}
+  .pl-voice{padding:20px !important;gap:12px !important;border-radius:22px !important}
+  .pl-voice > p{font-size:16px !important}
+  .pl-voice blockquote{font-size:13px !important}
+}
+
 .pl-sp-br{display:none}
 /* ===== SP only ===== */
 @media (max-width: 760px){
@@ -81,6 +122,7 @@ img{max-width:none}
   .pl-sticky-sub{display:none !important}
   .pl-hero-price{font-size:34px !important}
   .pl-sp-only{display:flex !important}
+  .pl-grid3{grid-template-columns:1fr !important}
   .pl-sp-br{display:inline}
   .pl-hero-powder{opacity:.45 !important}
   .pl-why-card{min-height:0 !important;padding:22px 20px 24px !important;gap:14px !important;border-radius:24px !important}
@@ -218,7 +260,7 @@ img{max-width:none}
         <p style="margin: 0; font-size: clamp(16px, 1.4vw, 18px); font-weight: 500; line-height: 1.9; color: #2E2E2A">「体にいいのは分かってるけど、続かない」。<br>そんな声から、PULSEは生まれました。</p>
       </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
+    <div class="pl-grid3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
         <article class="pl-tile pl-why-card" style="position: relative; overflow: hidden; background: #FFFFFF; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 18px; min-height: 460px; box-sizing: border-box">
           <img class="pl-why-img" src="/images/water-pour.webp" alt="" aria-hidden="true" style="right: -24px; bottom: -6px; width: 180px; position: absolute; pointer-events: none; filter: drop-shadow(0 14px 16px rgba(18,18,18,0.2))">
           <div style="position: relative; display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: -0.05em">01</span><span class="pl-why-label" style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: #4A4A45">BEFORE → AFTER</span></div>
@@ -266,9 +308,9 @@ img{max-width:none}
       <h3 style="margin: 0; font-weight: 900; font-size: clamp(26px, 3vw, 40px); line-height: 1.35; letter-spacing: -0.02em">いつ飲む？<br><span style="background: linear-gradient(transparent 60%, #CFF56A 60%)">毎日のどこにでも。</span></h3>
       <p style="margin: 0; display: flex; align-items: baseline; gap: 10px; font-weight: 700"><span style="font-size: 14px">1杯でたんぱく質</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">20<span style="font-size: 0.5em">g</span></span></p>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
+    <div class="pl-grid3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
       <article class="pl-tile" style="background: #FFFFFF; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="position: relative; height: 240px; background: #E2E2DA"><img src="/images/kitchen.webp" alt="朝のキッチンでシェイカーを振る女性" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%"><span style="position: absolute; left: 16px; top: 16px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px; padding: 8px 14px; border-radius: 999px; background: #CFF56A; border: 1.5px solid #121212">7:00 AM</span></div>
+        <div class="pl-scene-photo" style="position: relative; height: 240px; background: #E2E2DA"><img src="/images/kitchen.webp" alt="朝のキッチンでシェイカーを振る女性" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%"><span style="position: absolute; left: 16px; top: 16px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px; padding: 8px 14px; border-radius: 999px; background: #CFF56A; border: 1.5px solid #121212">7:00 AM</span></div>
         <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; gap: 8px">
           <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #4A4A45">MORNING</span>
           <h3 style="margin: 0; font-weight: 900; font-size: clamp(20px, 1.8vw, 24px); line-height: 1.45">忙しい朝は、朝ごはんの代わりに</h3>
@@ -276,7 +318,7 @@ img{max-width:none}
         </div>
       </article>
       <article class="pl-tile" style="background: #FFFFFF; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="position: relative; height: 240px; background: #E2E2DA"><img src="/images/scene-gym.webp" alt="ジムでシェイカーを飲む男性" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%"><span style="position: absolute; left: 16px; top: 16px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px; padding: 8px 14px; border-radius: 999px; background: #CFF56A; border: 1.5px solid #121212">7:30 PM</span></div>
+        <div class="pl-scene-photo" style="position: relative; height: 240px; background: #E2E2DA"><img src="/images/scene-gym.webp" alt="ジムでシェイカーを飲む男性" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%"><span style="position: absolute; left: 16px; top: 16px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px; padding: 8px 14px; border-radius: 999px; background: #CFF56A; border: 1.5px solid #121212">7:30 PM</span></div>
         <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; gap: 8px">
           <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #4A4A45">AFTER WORKOUT</span>
           <h3 style="margin: 0; font-weight: 900; font-size: clamp(20px, 1.8vw, 24px); line-height: 1.45">トレーニングのあとの、<br>ごほうびに</h3>
@@ -284,7 +326,7 @@ img{max-width:none}
         </div>
       </article>
       <article class="pl-tile" style="background: #FFFFFF; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="position: relative; height: 240px; background: #E2E2DA"><img src="/images/faq-photo.webp" alt="屋外でドリンクを飲む女性" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%"><span style="position: absolute; left: 16px; top: 16px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px; padding: 8px 14px; border-radius: 999px; background: #CFF56A; border: 1.5px solid #121212">SUNDAY</span></div>
+        <div class="pl-scene-photo" style="position: relative; height: 240px; background: #E2E2DA"><img src="/images/faq-photo.webp" alt="屋外でドリンクを飲む女性" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%"><span style="position: absolute; left: 16px; top: 16px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px; padding: 8px 14px; border-radius: 999px; background: #CFF56A; border: 1.5px solid #121212">SUNDAY</span></div>
         <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; gap: 8px">
           <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #4A4A45">WEEKEND</span>
           <h3 style="margin: 0; font-weight: 900; font-size: clamp(20px, 1.8vw, 24px); line-height: 1.45">休日のランニングのおともに</h3>
@@ -297,14 +339,14 @@ img{max-width:none}
   <!-- Flavors -->
   <section id="flavors" style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px) clamp(88px, 10vw, 136px)">
     <h2 style="margin: 0 0 40px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(48px, 7vw, 104px); line-height: 0.9; letter-spacing: -0.05em">3 FLAVORS<span style="color: #9A9A92">.</span></h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
+    <div class="pl-grid3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
       
         <article class="pl-tile pl-flavor-card" style="position: relative; overflow: hidden; background: #B5D38A; color: #121212; border-radius: 28px; padding: 32px; min-height: 420px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
           <img src="/images/bg-matcha.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; mix-blend-mode: multiply; pointer-events: none">
           <img src="/images/matcha.webp" alt="" aria-hidden="true" class="pl-flavor-ing" style="position: absolute; right: -14%; top: -4%; width: 78%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
           <span style="position: relative; font-size: 12px; font-weight: 700; letter-spacing: 0.12em">01</span>
           <div style="position: relative">
-            <p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">MATCHA</p>
+            <p class="pl-flavor-name" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">MATCHA</p>
             <p style="margin: 14px 0 0; font-weight: 900; font-size: clamp(26px, 2.4vw, 32px); line-height: 1.3">抹茶</p>
             <p style="margin: 8px 0 0; font-size: 16px; font-weight: 500; line-height: 1.7; white-space: pre-line">宇治抹茶のほろ苦さ。
 豆乳で割ると、抹茶ラテに。</p>
@@ -316,7 +358,7 @@ img{max-width:none}
           <img src="/images/cacao.webp" alt="" aria-hidden="true" class="pl-flavor-ing" style="position: absolute; right: -14%; top: -4%; width: 58%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
           <span style="position: relative; font-size: 12px; font-weight: 700; letter-spacing: 0.12em">02</span>
           <div style="position: relative">
-            <p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">CACAO</p>
+            <p class="pl-flavor-name" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">CACAO</p>
             <p style="margin: 14px 0 0; font-weight: 900; font-size: clamp(26px, 2.4vw, 32px); line-height: 1.3">カカオ</p>
             <p style="margin: 8px 0 0; font-size: 16px; font-weight: 500; line-height: 1.7; white-space: pre-line">カカオ豆の香ばしさ。
 甘さひかえめの、大人のココア。</p>
@@ -328,7 +370,7 @@ img{max-width:none}
           <img src="/images/hojicha.webp" alt="" aria-hidden="true" class="pl-flavor-ing" style="position: absolute; right: -14%; top: -4%; width: 70%; height: auto; filter: drop-shadow(0 20px 22px rgba(18,18,18,0.3)); pointer-events: none">
           <span style="position: relative; font-size: 12px; font-weight: 700; letter-spacing: 0.12em">03</span>
           <div style="position: relative">
-            <p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">HOJICHA</p>
+            <p class="pl-flavor-name" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 0.9; letter-spacing: -0.05em">HOJICHA</p>
             <p style="margin: 14px 0 0; font-weight: 900; font-size: clamp(26px, 2.4vw, 32px); line-height: 1.3">ほうじ茶</p>
             <p style="margin: 8px 0 0; font-size: 16px; font-weight: 500; line-height: 1.7; white-space: pre-line">焙じた茶葉の香り。
 夜のリラックスタイムにも。</p>
@@ -350,28 +392,28 @@ img{max-width:none}
         </div>
         <p style="margin: 0; max-width: 22em; font-size: clamp(14px, 1.2vw, 16px); font-weight: 500; line-height: 1.8">シェイカーとお水があれば、どこでも。<br>朝の準備の合間にも、ジムのロッカーでも。</p>
       </div>
-      <ol style="position: relative; z-index: 3; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 16px">
+      <ol class="pl-grid3" style="position: relative; z-index: 3; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 16px">
         <li style="position: relative; background: #121212; color: #F3F3EF; border: 2px solid #121212; box-shadow: 8px 8px 0 rgba(18,18,18,0.22); border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 20px; overflow: hidden">
-          <div style="position: relative; height: 260px; display: flex; align-items: center; justify-content: center">
-            <span aria-hidden="true" style="position: absolute; width: 210px; height: 210px; border-radius: 50%; background: #CFF56A"></span>
-            <img src="/images/step1.webp" alt="シェイカーにスプーンでパウダーを入れる手元" style="position: relative; max-height: 250px; max-width: 92%; width: auto; height: auto; filter: drop-shadow(0 18px 20px rgba(0,0,0,0.45))">
-            <span style="position: absolute; left: 0; top: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 80px; line-height: 0.8; letter-spacing: -0.06em; color: #F3F3EF">1</span>
+          <div class="pl-step-media" style="position: relative; height: 260px; display: flex; align-items: center; justify-content: center">
+            <span class="pl-step-circle" aria-hidden="true" style="position: absolute; width: 210px; height: 210px; border-radius: 50%; background: #CFF56A"></span>
+            <img class="pl-step-img" src="/images/step1.webp" alt="シェイカーにスプーンでパウダーを入れる手元" style="position: relative; max-height: 250px; max-width: 92%; width: auto; height: auto; filter: drop-shadow(0 18px 20px rgba(0,0,0,0.45))">
+            <span class="pl-step-num" style="position: absolute; left: 0; top: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 80px; line-height: 0.8; letter-spacing: -0.06em; color: #F3F3EF">1</span>
           </div>
           <div><h3 style="margin: 0; font-weight: 900; font-size: 20px">スプーン2杯</h3><p style="margin: 6px 0 0; font-size: 14px; color: #C8C8C0">付属のスプーンで、パウダーをシェイカーへ。</p></div>
         </li>
         <li style="position: relative; background: #121212; color: #F3F3EF; border: 2px solid #121212; box-shadow: 8px 8px 0 rgba(18,18,18,0.22); border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 20px; overflow: hidden">
-          <div style="position: relative; height: 260px; display: flex; align-items: center; justify-content: center">
-            <span aria-hidden="true" style="position: absolute; width: 210px; height: 210px; border-radius: 50%; background: #CFF56A"></span>
-            <img src="/images/step2.webp" alt="グラスに水を注ぐ様子" style="position: relative; max-height: 250px; max-width: 92%; width: auto; height: auto; filter: drop-shadow(0 18px 20px rgba(0,0,0,0.45))">
-            <span style="position: absolute; left: 0; top: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 80px; line-height: 0.8; letter-spacing: -0.06em; color: #F3F3EF">2</span>
+          <div class="pl-step-media" style="position: relative; height: 260px; display: flex; align-items: center; justify-content: center">
+            <span class="pl-step-circle" aria-hidden="true" style="position: absolute; width: 210px; height: 210px; border-radius: 50%; background: #CFF56A"></span>
+            <img class="pl-step-img" src="/images/step2.webp" alt="グラスに水を注ぐ様子" style="position: relative; max-height: 250px; max-width: 92%; width: auto; height: auto; filter: drop-shadow(0 18px 20px rgba(0,0,0,0.45))">
+            <span class="pl-step-num" style="position: absolute; left: 0; top: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 80px; line-height: 0.8; letter-spacing: -0.06em; color: #F3F3EF">2</span>
           </div>
           <div><h3 style="margin: 0; font-weight: 900; font-size: 20px">200mlを注ぐ</h3><p style="margin: 6px 0 0; font-size: 14px; color: #C8C8C0">水、豆乳、オーツミルク。お好みでどうぞ。</p></div>
         </li>
         <li style="position: relative; background: #121212; color: #F3F3EF; border: 2px solid #121212; box-shadow: 8px 8px 0 rgba(18,18,18,0.22); border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 20px; overflow: hidden">
-          <div style="position: relative; height: 260px; display: flex; align-items: center; justify-content: center">
-            <span aria-hidden="true" style="position: absolute; width: 210px; height: 210px; border-radius: 50%; background: #CFF56A"></span>
-            <img src="/images/step3.webp" alt="シェイカーを振る手" style="position: relative; max-height: 250px; max-width: 92%; width: auto; height: auto; filter: drop-shadow(0 18px 20px rgba(0,0,0,0.45))">
-            <span style="position: absolute; left: 0; top: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 80px; line-height: 0.8; letter-spacing: -0.06em; color: #F3F3EF">3</span>
+          <div class="pl-step-media" style="position: relative; height: 260px; display: flex; align-items: center; justify-content: center">
+            <span class="pl-step-circle" aria-hidden="true" style="position: absolute; width: 210px; height: 210px; border-radius: 50%; background: #CFF56A"></span>
+            <img class="pl-step-img" src="/images/step3.webp" alt="シェイカーを振る手" style="position: relative; max-height: 250px; max-width: 92%; width: auto; height: auto; filter: drop-shadow(0 18px 20px rgba(0,0,0,0.45))">
+            <span class="pl-step-num" style="position: absolute; left: 0; top: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 80px; line-height: 0.8; letter-spacing: -0.06em; color: #F3F3EF">3</span>
           </div>
           <div><h3 style="margin: 0; font-weight: 900; font-size: 20px">10秒シェイク</h3><p style="margin: 6px 0 0; font-size: 14px; color: #C8C8C0">ふたを閉めて振るだけ。ダマにならずに溶けます。</p></div>
         </li>
@@ -391,20 +433,20 @@ img{max-width:none}
       <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(48px, 7vw, 104px); line-height: 0.9; letter-spacing: -0.05em; color: #F3F3EF">REAL<br><span style="color: #CFF56A">VOICES.</span></h2>
       <p style="margin: 0; font-size: 12px; color: #D8D8D0">※個人の感想です（デモ用サンプル）</p>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
-      <figure style="margin: 0; background: #FFFFFF; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+    <div class="pl-grid3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
+      <figure class="pl-voice" style="margin: 0; background: #FFFFFF; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
         <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap"><span role="img" aria-label="5つ星中5" style="display: inline-flex; gap: 2px"><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span style="font-size: 12px; font-weight: 900; padding: 6px 12px; border-radius: 999px; background: #CFF56A">愛用：抹茶</span></div>
         <p style="margin: 0; font-weight: 900; font-size: 20px; line-height: 1.45">抹茶ラテみたいで、朝が楽しみに。</p>
         <blockquote style="margin: 0; font-weight: 500; font-size: 15px; line-height: 1.8; color: #2E2E2A">「プロテイン特有の粉っぽさがなくて、抹茶ラテみたい。朝ごはん代わりにしてます。」</blockquote>
         <figcaption style="margin-top: 4px; padding-top: 16px; border-top: 1px solid #E2E2DA; display: flex; align-items: center; gap: 12px; font-size: 12px; color: #4A4A45"><img src="/images/av1.webp" alt="" aria-hidden="true" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #B5D38A">20代・会社員</figcaption>
       </figure>
-      <figure style="margin: 0; background: #FFFFFF; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+      <figure class="pl-voice" style="margin: 0; background: #FFFFFF; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
         <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap"><span role="img" aria-label="5つ星中5" style="display: inline-flex; gap: 2px"><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span style="font-size: 12px; font-weight: 900; padding: 6px 12px; border-radius: 999px; background: #CFF56A">愛用：ほうじ茶</span></div>
         <p style="margin: 0; font-weight: 900; font-size: 20px; line-height: 1.45">お腹にやさしいから、毎日続く。</p>
         <blockquote style="margin: 0; font-weight: 500; font-size: 15px; line-height: 1.8; color: #2E2E2A">「牛乳がダメで諦めてたけど、これならお腹が平気。トレーニング後の習慣になりました。」</blockquote>
         <figcaption style="margin-top: 4px; padding-top: 16px; border-top: 1px solid #E2E2DA; display: flex; align-items: center; gap: 12px; font-size: 12px; color: #4A4A45"><img src="/images/av2.webp" alt="" aria-hidden="true" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #D9A877">30代・ヨガ講師</figcaption>
       </figure>
-      <figure style="margin: 0; background: #FFFFFF; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+      <figure class="pl-voice" style="margin: 0; background: #FFFFFF; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
         <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap"><span role="img" aria-label="5つ星中5" style="display: inline-flex; gap: 2px"><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="#121212"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span style="font-size: 12px; font-weight: 900; padding: 6px 12px; border-radius: 999px; background: #CFF56A">愛用：カカオ</span></div>
         <p style="margin: 0; font-weight: 900; font-size: 20px; line-height: 1.45">甘すぎないのが、ちょうどいい。</p>
         <blockquote style="margin: 0; font-weight: 500; font-size: 15px; line-height: 1.8; color: #2E2E2A">「カカオ味が本当においしい。甘すぎないのでおやつ代わりにも。」</blockquote>
